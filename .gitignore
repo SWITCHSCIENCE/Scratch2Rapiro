@@ -30,7 +30,6 @@ obj
 
 dev
 devApps
-bin/data
 !bin/data/.gitkeep
 
 resources/Sounds/
