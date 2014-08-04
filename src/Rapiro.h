@@ -1,13 +1,13 @@
 //
 //  Rapiro.h
-//  example2
+//  Rapiro2Scratch
 //
 //  Created by Kenta Hara on 5/29/14.
 //
 //
 
-#ifndef __example2__Rapiro__
-#define __example2__Rapiro__
+#ifndef __Rapiro2scratch__Rapiro__
+#define __Rapiro2scratch__Rapiro__
 
 #include "ofMain.h"
 #include "Part.h"
@@ -45,4 +45,4 @@ private:
     vector<Pose> poses;
 };
 
-#endif /* defined(__example2__Rapiro__) */
+#endif /* defined(__Rapiro2scratch__Rapiro__) */

@@ -1,6 +1,6 @@
 //
 //  Rapiro.cpp
-//  example2
+//  Rapiro2scratch
 //
 //  Created by Kenta Hara on 5/29/14.
 //
