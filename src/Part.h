@@ -1,13 +1,13 @@
 //
 //  Part.h
-//  Rapiro2Scratch
+//  Scratch2Rapiro
 //
 //  Created by Kenta Hara on 6/12/14.
 //
 //
 
-#ifndef __Rapiro2scratch__Part__
-#define __Rapiro2scratch__Part__
+#ifndef __Scratch2Rapiro__Part__
+#define __Scratch2Rapiro__Part__
 
 #include "ofMain.h"
 #include "Rapiro.h"
@@ -102,4 +102,4 @@ private:
 };
 
 
-#endif /* defined(__Rapiro2scratch__Part__) */
+#endif /* defined(__Scratch2Rapiro__Part__) */

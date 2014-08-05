@@ -1,4 +1,4 @@
-# Rapiro2Scratch
+# Scratch2Rapiro
 RapiroをScratch 2.0 Offline Editorから制御するためのソフトウェアです。
 
 ## 使い方
