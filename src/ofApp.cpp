@@ -107,6 +107,8 @@ void ofApp::blockEvent(ofxScratch2::BlockEvent &e){
         rapiro.setPartValueAtPose(ofToInt(e.paramaters->at(1)),
                                   partId,
                                   ofToInt(e.paramaters->at(3)));
+        scratch.updateValue("getServoAtPose/"+e.paramaters->at(1)+"/"+
+                            decodeEscapedUnicode(e.paramaters->at(2)), e.paramaters->at(3));
     } else if (e.paramaters->at(0) == "setLedAtPose") {
         int partId;
         for (partId = 12; partId < 15; partId++) {
@@ -117,9 +119,20 @@ void ofApp::blockEvent(ofxScratch2::BlockEvent &e){
         rapiro.setPartValueAtPose(ofToInt(e.paramaters->at(1)),
                                   partId,
                                   ofToInt(e.paramaters->at(3)));
+        scratch.updateValue("getLedAtPose/"+e.paramaters->at(1)+"/"+
+                            decodeEscapedUnicode(e.paramaters->at(2)), e.paramaters->at(3));
     } else if (e.paramaters->at(0) == "resetPose") {
         rapiro.resetPose(ofToInt(e.paramaters->at(1)));
     } else if (e.paramaters->at(0) == "sendPose") {
         rapiro.sendPose(ofToInt(e.paramaters->at(2)), ofToFloat(e.paramaters->at(1)));
     }
+}
+
+//--------------------------------------------------------------
+string ofApp::decodeEscapedUnicode(string escapedStr) {
+    ofStringReplace(escapedStr, "%u", "0x");
+    std::stringstream ss(escapedStr);
+    unsigned long val;
+    ss >> hex >> val;
+    return ofTextConverter::toUTF8(val);
 }

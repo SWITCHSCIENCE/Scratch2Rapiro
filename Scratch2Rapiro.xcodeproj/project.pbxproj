@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		00B0AFDEA4C9BD12481DC610 /* ofxScratch2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0731DEB9B1B9EE8C18217DB4 /* ofxScratch2.cpp */; };
 		374A8DB1192B459500464D86 /* libmicrohttpd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 374A8DB0192B459500464D86 /* libmicrohttpd.a */; };
+		37F854BD19909E3E003A1DCF /* ofTextConverter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37F854B519909E3E003A1DCF /* ofTextConverter.cpp */; };
+		37F854BE19909E3E003A1DCF /* ofUnicode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37F854B719909E3E003A1DCF /* ofUnicode.cpp */; };
+		37F854BF19909E3E003A1DCF /* ofUTF8.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37F854B919909E3E003A1DCF /* ofUTF8.cpp */; };
 		37F8DFF31936CA0B009ECE27 /* Rapiro.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37F8DFF11936CA0B009ECE27 /* Rapiro.cpp */; };
 		BBAB23CB13894F3D00AA2426 /* GLUT.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
 		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
@@ -63,12 +66,28 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0731DEB9B1B9EE8C18217DB4 /* ofxScratch2.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxScratch2.cpp; path = ../../../addons/ofxScratch/src/ofxScratch2.cpp; sourceTree = SOURCE_ROOT; };
+		0731DEB9B1B9EE8C18217DB4 /* ofxScratch2.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxScratch2.cpp; path = ../../../addons/ofxScratch/src/ofxScratch2.cpp; sourceTree = SOURCE_ROOT; };
 		2C58BAAF54639C1BF3B53FA7 /* MHD_config.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = MHD_config.h; path = ../../../addons/ofxHttpServer/libs/microhttpd/include/MHD_config.h; sourceTree = SOURCE_ROOT; };
 		372AA043198F7627006CF61D /* rapiro_pose.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = rapiro_pose.json; path = bin/data/rapiro_pose.json; sourceTree = "<group>"; };
 		3741839B19494992008804B2 /* Part.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Part.h; sourceTree = "<group>"; };
 		374A8DB0192B459500464D86 /* libmicrohttpd.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmicrohttpd.a; path = ../../../addons/ofxHttpServer/libs/microhttpd/lib/macosx/libmicrohttpd.a; sourceTree = "<group>"; };
 		37856E04192DA0550021204C /* crossdomain.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = crossdomain.xml; path = bin/data/crossdomain.xml; sourceTree = "<group>"; };
+		37F854A419909E3E003A1DCF /* checked.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = checked.h; sourceTree = "<group>"; };
+		37F854A519909E3E003A1DCF /* core.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = core.h; sourceTree = "<group>"; };
+		37F854A619909E3E003A1DCF /* unchecked.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unchecked.h; sourceTree = "<group>"; };
+		37F854A719909E3E003A1DCF /* utf8.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utf8.h; sourceTree = "<group>"; };
+		37F854AB19909E3E003A1DCF /* ReleaseNotes */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReleaseNotes; sourceTree = "<group>"; };
+		37F854AC19909E3E003A1DCF /* utf8cpp.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = utf8cpp.html; sourceTree = "<group>"; };
+		37F854AF19909E3E003A1DCF /* checked.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = checked.h; sourceTree = "<group>"; };
+		37F854B019909E3E003A1DCF /* core.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = core.h; sourceTree = "<group>"; };
+		37F854B119909E3E003A1DCF /* unchecked.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unchecked.h; sourceTree = "<group>"; };
+		37F854B219909E3E003A1DCF /* utf8.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utf8.h; sourceTree = "<group>"; };
+		37F854B519909E3E003A1DCF /* ofTextConverter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofTextConverter.cpp; sourceTree = "<group>"; };
+		37F854B619909E3E003A1DCF /* ofTextConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofTextConverter.h; sourceTree = "<group>"; };
+		37F854B719909E3E003A1DCF /* ofUnicode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofUnicode.cpp; sourceTree = "<group>"; };
+		37F854B819909E3E003A1DCF /* ofUnicode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofUnicode.h; sourceTree = "<group>"; };
+		37F854B919909E3E003A1DCF /* ofUTF8.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofUTF8.cpp; sourceTree = "<group>"; };
+		37F854BA19909E3E003A1DCF /* ofUTF8.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofUTF8.h; sourceTree = "<group>"; };
 		37F8DFF11936CA0B009ECE27 /* Rapiro.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Rapiro.cpp; sourceTree = "<group>"; };
 		37F8DFF21936CA0B009ECE27 /* Rapiro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rapiro.h; sourceTree = "<group>"; };
 		396FE68E255A8ABF9AF47DF3 /* ofxHTTPServer.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxHTTPServer.cpp; path = ../../../addons/ofxHttpServer/src/ofxHTTPServer.cpp; sourceTree = SOURCE_ROOT; };
@@ -167,6 +186,110 @@
 			name = libs;
 			sourceTree = "<group>";
 		};
+		37F8548D19909E3E003A1DCF /* ofxUnicode */ = {
+			isa = PBXGroup;
+			children = (
+				37F854A019909E3E003A1DCF /* libs */,
+				37F854B419909E3E003A1DCF /* src */,
+			);
+			name = ofxUnicode;
+			path = ../../../addons/ofxUnicode;
+			sourceTree = "<group>";
+		};
+		37F854A019909E3E003A1DCF /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				37F854A119909E3E003A1DCF /* utf8cpp */,
+			);
+			path = libs;
+			sourceTree = "<group>";
+		};
+		37F854A119909E3E003A1DCF /* utf8cpp */ = {
+			isa = PBXGroup;
+			children = (
+				37F854A219909E3E003A1DCF /* include */,
+				37F854A819909E3E003A1DCF /* src */,
+			);
+			path = utf8cpp;
+			sourceTree = "<group>";
+		};
+		37F854A219909E3E003A1DCF /* include */ = {
+			isa = PBXGroup;
+			children = (
+				37F854A319909E3E003A1DCF /* utf8 */,
+				37F854A719909E3E003A1DCF /* utf8.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		37F854A319909E3E003A1DCF /* utf8 */ = {
+			isa = PBXGroup;
+			children = (
+				37F854A419909E3E003A1DCF /* checked.h */,
+				37F854A519909E3E003A1DCF /* core.h */,
+				37F854A619909E3E003A1DCF /* unchecked.h */,
+			);
+			path = utf8;
+			sourceTree = "<group>";
+		};
+		37F854A819909E3E003A1DCF /* src */ = {
+			isa = PBXGroup;
+			children = (
+				37F854A919909E3E003A1DCF /* utf8_v2_3_1 */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		37F854A919909E3E003A1DCF /* utf8_v2_3_1 */ = {
+			isa = PBXGroup;
+			children = (
+				37F854AA19909E3E003A1DCF /* doc */,
+				37F854AD19909E3E003A1DCF /* source */,
+			);
+			path = utf8_v2_3_1;
+			sourceTree = "<group>";
+		};
+		37F854AA19909E3E003A1DCF /* doc */ = {
+			isa = PBXGroup;
+			children = (
+				37F854AB19909E3E003A1DCF /* ReleaseNotes */,
+				37F854AC19909E3E003A1DCF /* utf8cpp.html */,
+			);
+			path = doc;
+			sourceTree = "<group>";
+		};
+		37F854AD19909E3E003A1DCF /* source */ = {
+			isa = PBXGroup;
+			children = (
+				37F854AE19909E3E003A1DCF /* utf8 */,
+				37F854B219909E3E003A1DCF /* utf8.h */,
+			);
+			path = source;
+			sourceTree = "<group>";
+		};
+		37F854AE19909E3E003A1DCF /* utf8 */ = {
+			isa = PBXGroup;
+			children = (
+				37F854AF19909E3E003A1DCF /* checked.h */,
+				37F854B019909E3E003A1DCF /* core.h */,
+				37F854B119909E3E003A1DCF /* unchecked.h */,
+			);
+			path = utf8;
+			sourceTree = "<group>";
+		};
+		37F854B419909E3E003A1DCF /* src */ = {
+			isa = PBXGroup;
+			children = (
+				37F854B519909E3E003A1DCF /* ofTextConverter.cpp */,
+				37F854B619909E3E003A1DCF /* ofTextConverter.h */,
+				37F854B719909E3E003A1DCF /* ofUnicode.cpp */,
+				37F854B819909E3E003A1DCF /* ofUnicode.h */,
+				37F854B919909E3E003A1DCF /* ofUTF8.cpp */,
+				37F854BA19909E3E003A1DCF /* ofUTF8.h */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
 		3A4B590273697B8E8A4EE477 /* include */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +314,7 @@
 		BB4B014C10F69532006C3DED /* addons */ = {
 			isa = PBXGroup;
 			children = (
+				37F8548D19909E3E003A1DCF /* ofxUnicode */,
 				215A4AD7C5973050870D1BE8 /* ofxHttpServer */,
 				750506B8830F05F7ED29D9EA /* ofxScratch */,
 			);
@@ -380,7 +504,10 @@
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */,
 				FA470E7D7D578CB62384EC0E /* ofxHTTPServer.cpp in Sources */,
+				37F854BF19909E3E003A1DCF /* ofUTF8.cpp in Sources */,
 				37F8DFF31936CA0B009ECE27 /* Rapiro.cpp in Sources */,
+				37F854BD19909E3E003A1DCF /* ofTextConverter.cpp in Sources */,
+				37F854BE19909E3E003A1DCF /* ofUnicode.cpp in Sources */,
 				00B0AFDEA4C9BD12481DC610 /* ofxScratch2.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
