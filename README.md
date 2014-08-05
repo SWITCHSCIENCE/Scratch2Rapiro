@@ -22,6 +22,7 @@ addonとして、以下のaddonを利用しているので、開発の際は適�
 - [mactkg/ofxScratch](https://github.com/mactkg/ofxScratch)
 - [armadillu/ofxHttpServer](https://github.com/armadillu/ofxHttpServer)
 - [bakercp/ofxUnicode](https://github.com/bakercp/ofxUnicode)
+- [rezaali/ofxUI](https://github.com/rezaali/ofxUI)
 
 ## ライセンス
 MIT ライセンスで公開します。LICENSE.txtをご覧ください。
