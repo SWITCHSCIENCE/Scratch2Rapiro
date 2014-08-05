@@ -1,6 +1,7 @@
 #pragma once
 
 #include "ofxScratch2.h"
+#include "ofTextConverter.h"
 #include "ofMain.h"
 #include "Rapiro.h"
 
@@ -21,6 +22,7 @@ class ofApp : public ofBaseApp {
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
         void blockEvent(ofxScratch2::BlockEvent &e);
+        string decodeEscapedUnicode(string escapedStr);
     
         ofxScratch2::Offline scratch;
         Rapiro rapiro;
