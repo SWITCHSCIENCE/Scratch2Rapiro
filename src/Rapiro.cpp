@@ -1,6 +1,6 @@
 //
 //  Rapiro.cpp
-//  Rapiro2scratch
+//  Scratch2Rapiro
 //
 //  Created by Kenta Hara on 5/29/14.
 //
