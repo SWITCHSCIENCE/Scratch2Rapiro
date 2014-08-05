@@ -85,7 +85,9 @@ void ofApp::dragEvent(ofDragInfo dragInfo){
 void ofApp::blockEvent(ofxScratch2::BlockEvent &e){
     
     // default pose
-    if(e.paramaters->at(0) == "stop") {
+    if(e.paramaters->at(0) == "reset_all") {
+        rapiro.setAction(RAPIRO_CMD_STOP);
+    } else if(e.paramaters->at(0) == "stop") {
         rapiro.setAction(RAPIRO_CMD_STOP);
     } else if (e.paramaters->at(0) == "move") {
         if (e.paramaters->at(1) == "%u524D" ) {
