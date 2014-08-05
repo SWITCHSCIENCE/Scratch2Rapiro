@@ -2,8 +2,27 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
+    gui = new ofxUICanvas();
+    gui->setWidth(500);
+    gui->addLabel("Scratch2Rapiro", OFX_UI_FONT_LARGE);
+    gui->addSpacer();
+   
+    ofSerial serial;
+    vector<string> ports;
+    vector<ofSerialDeviceInfo> dInfo = serial.getDeviceList();
+    for (auto it = dInfo.begin(); it != dInfo.end(); it++) {
+        ports.push_back(it->getDevicePath());
+    }
+    
+    gui->setWidgetFontSize(OFX_UI_FONT_MEDIUM);
+    ddl = gui->addDropDownList("Select Rapiro Port", ports);
+    ddl->setAllowMultiple(false);
+    ddl->setAutoClose(true);
+    ddl->setName("port");
+    gui->autoSizeToFitWidgets();
+    ofAddListener(gui->newGUIEvent, this, &ofApp::guiEvent);
+    
     scratch.setup("", 12333); // localhost
-    rapiro.setup("/dev/tty.usbserial-DA00HQZX");
     ofAddListener(ofxScratch2::BlockEvent::events, this, &ofApp::blockEvent);
 }
 
@@ -135,4 +154,19 @@ string ofApp::decodeEscapedUnicode(string escapedStr) {
     unsigned long val;
     ss >> hex >> val;
     return ofTextConverter::toUTF8(val);
+}
+
+//--------------------------------------------------------------
+void ofApp::guiEvent(ofxUIEventArgs &e) {
+    if (e.getName() == "port") {
+        ofxUIDropDownList *ddlist = (ofxUIDropDownList *) e.widget;
+        vector<ofxUIWidget *> &selected = ddlist->getSelected();
+        for(int i = 0; i < selected.size(); i++) {
+            selectedPort = selected[i]->getName();
+            rapiro.setup(selectedPort);
+        }
+        if(selectedPort != "") {
+            ddlist->setLabelText(selectedPort);
+        }
+    }
 }
