@@ -2,6 +2,7 @@
 
 #include "ofxScratch2.h"
 #include "ofTextConverter.h"
+#include "ofxUI.h"
 #include "ofMain.h"
 #include "Rapiro.h"
 
@@ -27,7 +28,13 @@ class ofApp : public ofBaseApp {
         ofxScratch2::Offline scratch;
         Rapiro rapiro;
         ofColor bg;
-        
+    
+        ofxUICanvas *gui;
+        ofxUIDropDownList *ddl;
+        void guiEvent(ofxUIEventArgs &e);
+    
+        string selectedPort;
+    
         string convertTablePartId[15] = {
             "%u982D",
             "%u8170",
