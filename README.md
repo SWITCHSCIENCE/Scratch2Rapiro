@@ -4,7 +4,7 @@ RapiroをScratch 2.0 Offline Editorから制御するためのソフトウェア
 ## 使い方
 ![hogehoge](https://cloud.githubusercontent.com/assets/178418/3809127/2d909494-1c80-11e4-9568-671570a47641.gif)
 
-- [ここ](http://ssci.to/)からScratch2Rapiroをダウンロードし、解凍します。
+- [ここ](https://github.com/SWITCHSCIENCE/Scratch2Rapiro/releases)からScratch2Rapiroをダウンロードし、解凍します。
 - Scratch2RapiroとScratch2.0 Offline Editorを起動します。
 - Shiftキーを押しながら左上の「ファイル」をクリックして、「Import Experimental Extension」を選択します。
 - 同梱されていたRapiro.jsonを選択します。
